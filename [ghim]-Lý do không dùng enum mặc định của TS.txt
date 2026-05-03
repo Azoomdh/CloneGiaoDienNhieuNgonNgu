@@ -1,0 +1,3 @@
+// (hỏi GPT) : enum trong TS có còn được khuyến khích sử dụng không, và các biện pháp thay thế
+
+// (hỏi GPT) : tạo enum trong JS như thế nào và có được khuyến khích trong TS không
