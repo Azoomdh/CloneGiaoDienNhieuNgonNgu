@@ -2,13 +2,27 @@ import { Component } from "../Enum/Component";
 import { QuocGia } from '../../Util/QuocGia';
 import { CauTao_HasQuocGia_String } from "../../Util/CauTao_HasQuocGia";
 
-export type CauTao_GiaTri_TheoQuocGia_ThuocTinhCss = {
-    [Component.Component1]: any,
-    [Component.Component2]: any,
-    [Component.Component3]: any,
+export type CauTao_GiaTri_TheoT_ThuocTinhCss<T> = {
+    [Component.Component1]: {
+        "ThuocTinh1" : T,
+        "ThuocTinh2" : T,
+        "ThuocTinh3" : T,
+    },
+    [Component.Component2]: {
+        "ThuocTinh1" : T,
+        "ThuocTinh2" : T,
+    },
+    [Component.Component3]: {
+        "ThuocTinh1" : T,
+        "ThuocTinh2" : T,
+        "ThuocTinh3" : T,
+        "ThuocTinh4" : T,
+    },
 };
 
-export type CauTao_GiaTri_Rieng_ThuocTinhCss = CauTao_GiaTri_TheoQuocGia_ThuocTinhCss;
+export type CauTao_GiaTri_Rieng_ThuocTinhCss = CauTao_GiaTri_TheoT_ThuocTinhCss<any>;
+
+export type CauTao_GiaTri_TheoQuocGia_ThuocTinhCss = CauTao_GiaTri_TheoT_ThuocTinhCss<CauTao_HasQuocGia_String>;
 
 export const GiaTri_Rieng_ThuocTinhCss : CauTao_GiaTri_Rieng_ThuocTinhCss = {
     [Component.Component1]:{
@@ -77,21 +91,21 @@ export const GiaTri_TheoQuocGia_ThuocTinhCss : CauTao_GiaTri_TheoQuocGia_ThuocTi
             [QuocGia.Lao] : GiaTri_Rieng_ThuocTinhCss[Component.Component1]["ThuocTinh1"]["ver2"],
             [QuocGia.Thai] : GiaTri_Rieng_ThuocTinhCss[Component.Component1]["ThuocTinh1"]["ver2"],
             [QuocGia.Viet] : GiaTri_Rieng_ThuocTinhCss[Component.Component1]["ThuocTinh1"]["ver3"],
-        } satisfies CauTao_HasQuocGia_String,
+        },
 
         "ThuocTinh2" : {
             [QuocGia.Cam] : GiaTri_Rieng_ThuocTinhCss[Component.Component1]["ThuocTinh2"]["ver1"],
             [QuocGia.Lao] : GiaTri_Rieng_ThuocTinhCss[Component.Component1]["ThuocTinh2"]["ver2"],
             [QuocGia.Thai] : GiaTri_Rieng_ThuocTinhCss[Component.Component1]["ThuocTinh2"]["ver2"],
             [QuocGia.Viet] : GiaTri_Rieng_ThuocTinhCss[Component.Component1]["ThuocTinh2"]["ver3"],
-        } satisfies CauTao_HasQuocGia_String,
+        },
         
         "ThuocTinh3" : {
             [QuocGia.Cam] : GiaTri_Rieng_ThuocTinhCss[Component.Component1]["ThuocTinh3"]["ver1"],
             [QuocGia.Lao] : GiaTri_Rieng_ThuocTinhCss[Component.Component1]["ThuocTinh3"]["ver2"],
             [QuocGia.Thai] : GiaTri_Rieng_ThuocTinhCss[Component.Component1]["ThuocTinh3"]["ver2"],
             [QuocGia.Viet] : GiaTri_Rieng_ThuocTinhCss[Component.Component1]["ThuocTinh3"]["ver3"],
-        } satisfies CauTao_HasQuocGia_String,
+        },
     },
 
     [Component.Component2]:{
@@ -100,13 +114,13 @@ export const GiaTri_TheoQuocGia_ThuocTinhCss : CauTao_GiaTri_TheoQuocGia_ThuocTi
             [QuocGia.Lao] : GiaTri_Rieng_ThuocTinhCss[Component.Component2]["ThuocTinh1"]["ver2"],
             [QuocGia.Thai] : GiaTri_Rieng_ThuocTinhCss[Component.Component2]["ThuocTinh1"]["ver2"],
             [QuocGia.Viet] : GiaTri_Rieng_ThuocTinhCss[Component.Component2]["ThuocTinh1"]["ver3"],
-        } satisfies CauTao_HasQuocGia_String,
+        },
         "ThuocTinh2" : {
             [QuocGia.Cam] : GiaTri_Rieng_ThuocTinhCss[Component.Component2]["ThuocTinh2"]["ver1"],
             [QuocGia.Lao] : GiaTri_Rieng_ThuocTinhCss[Component.Component2]["ThuocTinh2"]["ver2"],
             [QuocGia.Thai] : GiaTri_Rieng_ThuocTinhCss[Component.Component2]["ThuocTinh2"]["ver2"],
             [QuocGia.Viet] : GiaTri_Rieng_ThuocTinhCss[Component.Component2]["ThuocTinh2"]["ver3"],
-        } satisfies CauTao_HasQuocGia_String,
+        },
     },
 
     [Component.Component3]:{
@@ -115,28 +129,28 @@ export const GiaTri_TheoQuocGia_ThuocTinhCss : CauTao_GiaTri_TheoQuocGia_ThuocTi
             [QuocGia.Lao] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh1"]["ver2"],
             [QuocGia.Thai] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh1"]["ver2"],
             [QuocGia.Viet] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh1"]["ver3"],
-        } satisfies CauTao_HasQuocGia_String,
+        },
         
         "ThuocTinh2" : {
             [QuocGia.Cam] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh2"]["ver1"],
             [QuocGia.Lao] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh2"]["ver2"],
             [QuocGia.Thai] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh2"]["ver2"],
             [QuocGia.Viet] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh2"]["ver3"],
-        } satisfies CauTao_HasQuocGia_String,
+        },
         
         "ThuocTinh3" : {
             [QuocGia.Cam] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh3"]["ver1"],
             [QuocGia.Lao] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh3"]["ver2"],
             [QuocGia.Thai] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh3"]["ver2"],
             [QuocGia.Viet] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh3"]["ver3"],
-        } satisfies CauTao_HasQuocGia_String,
+        },
 
         "ThuocTinh4" : {
             [QuocGia.Cam] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh4"]["ver1"],
             [QuocGia.Lao] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh4"]["ver2"],
             [QuocGia.Thai] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh4"]["ver2"],
             [QuocGia.Viet] : GiaTri_Rieng_ThuocTinhCss[Component.Component3]["ThuocTinh4"]["ver3"],
-        } satisfies CauTao_HasQuocGia_String,
+        },
     },
 }as const;
 

@@ -7,12 +7,11 @@ import { Component2_1 } from "../Component/Component2/Component2_1";
 import { Component2_2 } from "../Component/Component2/Component2_2";
 import { CauTao_HasQuocGia_Function } from "../../Util/CauTao_HasQuocGia";
 
-export type CauTao_GiaTri_Component_Component = CauTao_HasQuocGia_Function;
 
 export type CauTao_GiaTri_Component = {
-    [Component.Component1] : CauTao_GiaTri_Component_Component,
-    [Component.Component2] : CauTao_GiaTri_Component_Component,
-    [Component.Component3] : CauTao_GiaTri_Component_Component,
+    [Component.Component1] : CauTao_HasQuocGia_Function,
+    [Component.Component2] : CauTao_HasQuocGia_Function,
+    [Component.Component3] : CauTao_HasQuocGia_Function,
 };
 
 export const GiaTri_Component : CauTao_GiaTri_Component = {

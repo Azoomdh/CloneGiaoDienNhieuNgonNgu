@@ -13,5 +13,4 @@ export const QuocGia = {
 export type QuocGia = typeof QuocGia[keyof typeof QuocGia];
 
 
-console.log(QuocGia.Cam);
 // console.log(QuocGia.Cam);
