@@ -1,15 +1,24 @@
 import { QuocGia } from './QuocGia';
 
-export type MultiLanguageMap<Type1> = Record<QuocGia, Type1>;
+export class MultiLanguageMap<Type1> extends Map<QuocGia, Type1|null> {
+
+    constructor(){
+        super();
+
+        for(const quocGia of Object.values(QuocGia) ){
+            this.set(quocGia, null);
+        }
+    }
+}
 
 export class MultiLanguagePart<Type1> {
-    content : MultiLanguageMap<Type1>;
+    content = new MultiLanguageMap<Type1>();
 
-    constructor(content : MultiLanguageMap<Type1> ){
+    constructor(content : MultiLanguageMap<Type1> ) {
         this.content = content;
     }
 
-    public getContent(quocGia : QuocGia) : Type1 {
-        return this.content[quocGia];
+    public getContent(quocGia : QuocGia) {
+        return this.content.get(quocGia);
     }
 }
