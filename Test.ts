@@ -31,3 +31,11 @@ console.log(
         + "\n"
     + "</p>"
 );
+
+let multiLanguage_Style1 = {
+    
+}
+
+console.log(
+    `<p style="${multiLanguag_Style1.get(quocGia1)};"> abc </p>`
+);
